@@ -1,13 +1,16 @@
 package edu.ccsu.beans;
 import java.io.Serializable;
-import javax.persistence.Column;
+import java.util.ArrayList;
+import javax.faces.bean.ManagedBean;
+import javax.faces.bean.SessionScoped;
+import javax.faces.event.ActionEvent;
+import javax.faces.model.SelectItem;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
-import javax.persistence.Table;
 
 @Entity
-@Table (name="customer")
+@ManagedBean 
 public class Customer implements Serializable 
 {
     @Id
@@ -18,7 +21,7 @@ public class Customer implements Serializable
     private String street;
     private String city;
     private String zipcode;
-    private String usState;
+    private String usstate;
     private String phone;
     private String email;
        
@@ -79,12 +82,12 @@ public class Customer implements Serializable
 
     public String getUsstate() 
     {
-        return usState;
+        return usstate;
     }
 
-    public void setState(String usState) 
+    public void setUsstate(String usstate) 
     {
-        this.usState = usState;
+        this.usstate = usstate;
     }
     
     public String getZipcode() 

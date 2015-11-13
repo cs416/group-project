@@ -1,18 +1,20 @@
 package edu.ccsu.beans;
+
 import java.io.Serializable;
-import javax.persistence.*;
-/**
- *
- * @author Ems
- */
+import javax.faces.bean.ManagedBean;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+ 
 @Entity
+@ManagedBean
 public class SignUp implements Serializable
 {
     @Id
     @GeneratedValue
     private Integer id;
-    private String customerID;
-    private String password;   
+    private String customerID="";
+    private String password="";   
       
     public SignUp()
     {

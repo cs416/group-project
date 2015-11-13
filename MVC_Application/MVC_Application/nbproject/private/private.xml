@@ -3,10 +3,10 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/Users/Cameron/Desktop/MVC_Application/MVC_Application/web/CustomerRegister.jsp</file>
+            <file>file:/C:/Users/Cameron/Desktop/MVC_Application/MVC_Application/web/SignUp.xhtml</file>
+            <file>file:/C:/Users/Cameron/Desktop/MVC_Application/MVC_Application/web/RegisterCustomer.xhtml</file>
             <file>file:/C:/Users/Cameron/Desktop/MVC_Application/MVC_Application/web/index.xhtml</file>
-            <file>file:/C:/Users/Cameron/Desktop/MVC_Application/MVC_Application/web/SignUp.jsp</file>
-            <file>file:/C:/Users/Cameron/Desktop/MVC_Application/MVC_Application/web/WEB-INF/web.xml</file>
+            <file>file:/C:/Users/Cameron/Desktop/MVC_Application/MVC_Application/web/RegisterSave.xhtml</file>
         </group>
     </open-files>
 </project-private>
