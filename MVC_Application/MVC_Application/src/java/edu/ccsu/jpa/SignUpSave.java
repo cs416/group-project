@@ -36,14 +36,11 @@ public class SignUpSave
         return returnValue;
     }
     
-    public SignUp getSignUp()
-    {
+    public SignUp getSignUp() {
         return signUp;
     }
     
-    public void setSignUp(SignUp signUp)
-    {
+    public void setSignUp(SignUp signUp) {
         this.signUp=signUp;
     }
 }
-

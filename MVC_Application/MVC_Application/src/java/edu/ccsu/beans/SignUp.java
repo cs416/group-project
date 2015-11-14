@@ -16,28 +16,23 @@ public class SignUp implements Serializable
     private String customerID="";
     private String password="";   
       
-    public SignUp()
-    {
+    public SignUp() {
         
     }
     
-    public String getCustomerID()
-    {
+    public String getCustomerID() {
         return customerID;
     }
     
-    public void setCustomerID(String customerID)
-    {
+    public void setCustomerID(String customerID) {
         this.customerID = customerID;
     }
     
-    public String getPassword()
-    {
+    public String getPassword() {
         return password;
     }
     
-    public void setPassword(String password)
-    {
+    public void setPassword(String password) {
         this.password = password;
     }
 }

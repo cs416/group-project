@@ -17,6 +17,7 @@ public class CustomerSave
     private UserTransaction userTransaction;
     @ManagedProperty(value = "#{customer}")
     private Customer customer;
+    
     public String saveInfo() 
     {
         String returnValue = "error";
@@ -33,12 +34,11 @@ public class CustomerSave
         }
         return returnValue;
     }
-    public Customer getCustomer()
-    {
+    public Customer getCustomer() {
         return customer;
     }
-    public void setCustomer(Customer customer)
-    {
+    
+    public void setCustomer(Customer customer) {
         this.customer=customer;
     }
   }
