@@ -12,9 +12,14 @@
         <h:form>
         <h:panelGrid columns="2" columnClasses="rightAlign,leftAlign">
             <h:outputText value="Customer ID (Use email)"></h:outputText>
-            <h:inputText label="customerID" value="#{signUp.customerID}" required="true"><f:validateLength minimum="0" maximum="100"></f:validateLength></h:inputText>
+            <h:inputText label="customerID" value="#{signUp.customerID}" required="true">
+                <f:validateRequired></f:validateRequired>
+            </h:inputText>
             <h:outputText value="Password"></h:outputText>
-            <h:inputText label="password" value="#{signUp.password}" required="true"><f:validateLength minimum="0" maximum="100"></f:validateLength></h:inputText>
+            <h:inputText label="password" value="#{signUp.password}" required="true">
+                <f:validateRequired></f:validateRequired>
+                <f:validateLength minimum="4" maximum="100"></f:validateLength>
+            </h:inputText>
             <h:commandButton action="#{signUpSave.saveInfo}" value="Save"></h:commandButton>
         </h:panelGrid>
         </h:form>

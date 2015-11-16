@@ -5,28 +5,34 @@
       xmlns:f="http://java.sun.com/jsf/core">
     <h:head>
         <title>Registration</title>
-    </h:head>
+    </h:head>   
     <h:body>
         <h1>Enter your information</h1>
         <h:messages style="color:red;font-weight:bold;"></h:messages>
         <h:form>
         <h:panelGrid columns="2" columnClasses="rightAlign,leftAlign">
-            <h:outputText value="First Name"></h:outputText>
-            <h:inputText label="first" value="#{customer.firstName}" required="true"></h:inputText>
-            <h:outputText value="Last Name"></h:outputText>
-            <h:inputText label="last" value="#{customer.lastName}" required="true"></h:inputText>
+            <h:outputText value="First Name"/>       
+            <h:inputText label="first" value="#{customer.firstName}" id="first" required="true"><f:validateRequired></f:validateRequired>
+            <f:ajax event="keyup" execute="last" render="fullname"/>
+            </h:inputText>  
+            <h:outputText value="Last Name"/>
+            <h:inputText label="last" value="#{customer.lastName}" id="last" required="true"><f:validateRequired></f:validateRequired>    
+            <f:ajax event="keyup" execute="first" render="fullname"/>
+            </h:inputText>
+            <h:outputText value="Full name"/>
+            <h:outputText id="fullname" value= "#{customer.firstName} #{customer.lastName}" ></h:outputText>
             <h:outputText value="Street Address"></h:outputText>
-            <h:inputText label="street" value="#{customer.street}" required="true"></h:inputText>
+            <h:inputText label="street" value="#{customer.street}" required="true"><f:validateRequired></f:validateRequired></h:inputText>
             <h:outputText value="City"></h:outputText>
-            <h:inputText label="city" value="#{customer.city}" required="true"></h:inputText>
+            <h:inputText label="city" value="#{customer.city}" required="true"><f:validateRequired></f:validateRequired></h:inputText>
             <h:outputText value="State"></h:outputText>
-            <h:inputText label="usstate" value="#{customer.usstate}" required="true"></h:inputText>
+            <h:inputText label="usstate" value="#{customer.usstate}" required="true"><f:validateRequired></f:validateRequired></h:inputText>
             <h:outputText value="Zip Code"></h:outputText>
-            <h:inputText label="zipcode" value="#{customer.zipcode}" required="true"></h:inputText>
+            <h:inputText label="zipcode" value="#{customer.zipcode}" required="true"><f:validateRequired></f:validateRequired></h:inputText>
             <h:outputText value="Phone Number"></h:outputText>
-            <h:inputText label="phone" value="#{customer.phone}" required="true"></h:inputText>
+            <h:inputText label="phone" value="#{customer.phone}" required="true"><f:validateRequired></f:validateRequired></h:inputText>
             <h:outputText value="Email Address"></h:outputText>
-            <h:inputText label="email" value="#{customer.email}" required="true"></h:inputText>
+            <h:inputText label="email" value="#{customer.email}" required="true"><f:validateRequired></f:validateRequired></h:inputText>
             <h:commandButton action="#{customerSave.saveInfo}" value="Save"></h:commandButton>
         </h:panelGrid>
         </h:form>
