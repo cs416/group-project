@@ -1,14 +1,18 @@
 package edu.ccsu.jpa;
 import edu.ccsu.beans.Customer;
+import java.util.ArrayList;
+import java.util.List;
 import javax.annotation.Resource;
 import javax.faces.bean.ManagedBean;
 import javax.faces.bean.ManagedProperty;
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.PersistenceUnit;
+import javax.persistence.Query;
 import javax.transaction.UserTransaction;
 
 @ManagedBean
+
 public class CustomerSave 
 {
     @PersistenceUnit(unitName = "HW3DBPU")
@@ -40,5 +44,43 @@ public class CustomerSave
     public void setCustomer(Customer customer)
     {
         this.customer=customer;
+    }    
+    
+    public List getMatchingName() {
+        List<Customer> customers = new ArrayList();
+        EntityManager entityManager = entityManagerFactory.createEntityManager();
+        String selectSQL = "select c from Customer c where c.firstName like :firstName and c.lastName like :lastName";
+        try {
+            Query selectQuery = entityManager.createQuery(selectSQL);
+            selectQuery.setParameter("firstName", customer.getFirstName() + "%");
+            selectQuery.setParameter("lastName", customer.getLastName() + "%");
+            customers = selectQuery.getResultList();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return customers;
+    }  
+    
+    public List getMatchingCity()
+    {
+        List<Customer> zip = new ArrayList();
+        EntityManager entityManager = entityManagerFactory.createEntityManager();
+        String selectSQL = "select c from Customer c where c.city like :city";
+        try
+        {
+            Query selectQuery = entityManager.createQuery(selectSQL);
+            selectQuery.setParameter("city", customer.getCity() + "%");
+            zip = selectQuery.getResultList();
+        }
+        catch (Exception e)
+        {
+            e.printStackTrace();
+        }
+        return zip;
     }
-  }
+}
+    
+ 
+   
+        
+        
