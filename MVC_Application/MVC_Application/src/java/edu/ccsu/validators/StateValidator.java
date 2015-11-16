@@ -10,23 +10,20 @@ import edu.ccsu.beans.Customer;
 import javax.validation.ConstraintValidator;
 import javax.validation.ConstraintValidatorContext;
 
-public class StateValidator implements ConstraintValidator<State, Customer> {
+public class StateValidator implements ConstraintValidator<State, String> {
 
     @Override
     public void initialize(State constraintAnnotation) {
     }
 
     @Override
-    public boolean isValid(Customer value, ConstraintValidatorContext context) {
+    public boolean isValid(String value, ConstraintValidatorContext context) {
+
         if (value == null) {
             return false;
         }
-
-        if (value.getUsstate() == null) {
-            return false;
-        }
         
-        if (value.getUsstate().length() != 2) {
+        if (value.length() != 2) {
             return false;
         }
         

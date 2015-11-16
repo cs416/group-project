@@ -3,10 +3,16 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/Users/Cameron/Desktop/MVC_Application/MVC_Application/web/SignUp.xhtml</file>
-            <file>file:/C:/Users/Cameron/Desktop/MVC_Application/MVC_Application/web/RegisterCustomer.xhtml</file>
-            <file>file:/C:/Users/Cameron/Desktop/MVC_Application/MVC_Application/web/index.xhtml</file>
-            <file>file:/C:/Users/Cameron/Desktop/MVC_Application/MVC_Application/web/RegisterSave.xhtml</file>
+            <file>file:/Users/Kevin/NetBeansProjects/WebProject/groupproject/MVC_Application/MVC_Application/src/java/edu/ccsu/jpa/SignUpSave.java</file>
+            <file>file:/Users/Kevin/NetBeansProjects/WebProject/groupproject/MVC_Application/MVC_Application/src/java/edu/ccsu/beans/SignUp.java</file>
+            <file>file:/Users/Kevin/NetBeansProjects/WebProject/groupproject/MVC_Application/MVC_Application/src/java/edu/ccsu/jpa/CustomerSave.java</file>
+            <file>file:/Users/Kevin/NetBeansProjects/WebProject/groupproject/MVC_Application/MVC_Application/web/index.xhtml</file>
+            <file>file:/Users/Kevin/NetBeansProjects/WebProject/groupproject/MVC_Application/MVC_Application/src/java/edu/ccsu/validators/StateValidator.java</file>
+            <file>file:/Users/Kevin/NetBeansProjects/WebProject/groupproject/MVC_Application/MVC_Application/web/CustomerSearch.xhtml</file>
+            <file>file:/Users/Kevin/NetBeansProjects/WebProject/groupproject/MVC_Application/MVC_Application/web/login.jsp</file>
+            <file>file:/Users/Kevin/NetBeansProjects/WebProject/groupproject/MVC_Application/MVC_Application/src/java/edu/ccsu/validators/State.java</file>
+            <file>file:/Users/Kevin/NetBeansProjects/WebProject/groupproject/MVC_Application/MVC_Application/web/RegisterCustomer.xhtml</file>
+            <file>file:/Users/Kevin/NetBeansProjects/WebProject/groupproject/MVC_Application/MVC_Application/src/java/edu/ccsu/beans/Customer.java</file>
         </group>
     </open-files>
 </project-private>

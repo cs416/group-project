@@ -19,7 +19,7 @@ import javax.validation.Payload;
 @Documented
 public @interface State {
 
-    String message() default "Invalid State";
+    String message() default "Please enter a 2 character state abbreviation";
 
     Class<?>[] groups() default {};
 
