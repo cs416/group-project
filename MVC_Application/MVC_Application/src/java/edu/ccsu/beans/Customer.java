@@ -24,7 +24,7 @@ public class Customer implements Serializable
     private String street;
     private String city;
     private String zipcode;
-    @Size (min=2)
+    @State
     private String usstate;
     private String phone;
     private String email;
