@@ -25,7 +25,11 @@ public class StateValidator implements ConstraintValidator<State, Customer> {
         if (value.getUsstate() == null) {
             return false;
         }
-
-        return value.getUsstate().length() == 2;
+        
+        if (value.getUsstate().length() != 2) {
+            return false;
+        }
+        
+        return true;
     }
 }
