@@ -121,24 +121,9 @@
                 <f:selectItem itemValue = "PM" itemLabel = "PM" />
             </h:selectOneMenu> <br/> <br/>
             <!--Submit product selection button-->
-            <h:commandButton value = "Submit"
+            <h:commandButton value = "Reivew"
                              type = "submit"
-                             action = "#{reservationSave.saveInfo}" />
+                             action = "makeThisGoToNextPage" />
         </h:form>
-        
-        <!--Show user reservation information-->
-        <p><b><u>Preview of Reservation</u></b></p>
-        <!--Display airport and whether it is pick up or drop off-->
-        <p>Pick up/drop off at Airport: 
-        <h:outputText value = "#{Reservation.dropPick}" />
-        <h:outputText value = "#{Reservation.airport}" /><br/>
-        <!--Display date-->
-        Date: <h:outputText value = "#{Reservation.rDay}" />
-         - <h:outputText value = "#{Reservation.rMonth}" />
-         - <h:outputText value = "#{Reservation.rYear}" /><br/>
-        <!--Display time-->
-        Time: <h:outputText value = "#{Reservation.rHour}" />
-        :<h:outputText value = "#{Reservation.rMinute}" />
-        <h:outputText value = "#{Reservation.ampm}" /></p>
     </h:body>
 </html>
