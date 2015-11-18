@@ -24,7 +24,6 @@ public class ReservationSave
     private UserTransaction userTransaction;
     @ManagedProperty(value = "#{reservation}")
     private Reservation reservation;
-    
     public String saveInfo() 
     {
         String returnValue = "error";
@@ -46,4 +45,9 @@ public class ReservationSave
     public void setReservation(Reservation reservation){
         this.reservation = reservation;
     }    
+    
 }
+    
+ 
+   
+        
