@@ -1,0 +1,42 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core">
+  
+<h:head>  
+    <title>Login Page</title>  
+</h:head>  
+<h:body>  
+    
+        <h:form id="loginForm">  
+            <table frame="box">  
+                <tr>  
+                    <th>Login with your Customer ID and Password</th>  
+                </tr>  
+                <tr>  
+                    <td><h:outputText value="Enter Customer ID : " /></td>  
+                    <td><h:inputText id="customerID" value="#{signUp.customerID}"  
+                            required="true" requiredMessage="Name field can't be empty" />  
+                    </td>  
+                    <td><h:message for="inputName" style="color:red; font-weight:bold;" /></td>  
+                </tr>  
+                <tr>  
+                    <td><h:outputText value="Please Enter Password :" /></td>  
+                    <td><h:inputSecret id="password" value="#{signUp.password}"  
+                            required="true"  
+                            requiredMessage="Password can't be empty" /></td>  
+                    <td><h:message for="password" style="color:red;font-weight:bold;" /></td>  
+                </tr>  
+                <tr>  
+                    <td><h:commandButton value="Sign In" action="#{signUp.login}" /></td>  
+                    <td><h:outputText value="This is not a valid User ID " />   
+                        <h:outputLink value="SignUp.xhtml">Sign Up to be a member! </h:outputLink>  
+                    </td>  
+                </tr>  
+            </table>  
+        </h:form>  
+     
+</h:body>  
+</html>  
+

@@ -1,19 +1,14 @@
 package edu.ccsu.beans;
 import java.io.Serializable;
-import java.util.ArrayList;
 import javax.faces.bean.ManagedBean;
 import javax.faces.bean.SessionScoped;
-import javax.faces.event.ActionEvent;
-import javax.faces.model.SelectItem;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
-import javax.validation.constraints.NotNull;
-import javax.validation.constraints.Size;
-import edu.ccsu.validators.State;
 
 @Entity
 @ManagedBean 
+@SessionScoped
 public class Customer implements Serializable 
 {
     @Id
@@ -24,7 +19,6 @@ public class Customer implements Serializable
     private String street;
     private String city;
     private String zipcode;
-    @State
     private String usstate;
     private String phone;
     private String email;
