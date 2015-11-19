@@ -2,7 +2,6 @@
 /* All data for a users registration from product select page.     */
 package edu.ccsu.beans;
 
-import java.beans.*;
 import java.io.Serializable;
 import javax.persistence.Entity;
 import javax.faces.bean.ManagedBean;
