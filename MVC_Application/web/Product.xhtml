@@ -93,7 +93,7 @@
             <p><b>Select a time</b></p>
             <!--Hour-->
             Hour:
-            <h:selectOneMenu value = "#{reservation.rMonth}">
+            <h:selectOneMenu value = "#{reservation.rHour}">
                 <f:selectItem itemValue = "1" itemLabel = "1" />
                 <f:selectItem itemValue = "2" itemLabel = "2" />
                 <f:selectItem itemValue = "3" itemLabel = "3" />
@@ -123,7 +123,7 @@
             <!--Submit product selection button-->
             <h:commandButton value = "Reivew"
                              type = "submit"
-                             action = "makeThisGoToNextPage" />
+                             action = "ProductReview.xhtml" />
         </h:form>
     </h:body>
 </html>
