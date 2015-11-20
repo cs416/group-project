@@ -4,10 +4,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml"
       xmlns:h="http://java.sun.com/jsf/html"
       xmlns:f="http://java.sun.com/jsf/core">
-<!--ProductReview.xhtml                 @author(Cameron)          -->
-<!--After customer chooses product, this page is text only review -->
-<!-- before sending input to the database.-->
-    <h:head>
+   <h:head>
         <h1>Product Review</h1>
         <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     </h:head>
@@ -31,7 +28,7 @@
         <h:form>
             <h:commandButton value = "Submit"
                              type = "submit"
-                             action = "#{registerReservation.saveInfo}" />
+                             action = "#{reservationSave.saveInfo}" />
         </h:form>
     </h:body>
     

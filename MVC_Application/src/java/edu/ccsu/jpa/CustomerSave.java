@@ -61,24 +61,7 @@ public class CustomerSave
         return customers;
     }  
     
-    public List getMatchingCity()
-    {
-        List<Customer> zip = new ArrayList();
-        EntityManager entityManager = entityManagerFactory.createEntityManager();
-        String selectSQL = "select c from Customer c where c.city like :city";
-        try
-        {
-            Query selectQuery = entityManager.createQuery(selectSQL);
-            selectQuery.setParameter("city", customer.getCity() + "%");
-            zip = selectQuery.getResultList();
-        }
-        catch (Exception e)
-        {
-            e.printStackTrace();
-        }
-        return zip;
-    }
-}
+   }
     
  
    

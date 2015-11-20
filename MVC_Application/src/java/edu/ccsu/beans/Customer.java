@@ -1,14 +1,15 @@
 package edu.ccsu.beans;
 import java.io.Serializable;
 import javax.faces.bean.ManagedBean;
-import javax.faces.bean.SessionScoped;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import javax.validation.constraints.Pattern;
+import javax.validation.constraints.Size;
+import edu.ccsu.validators.State;
 
 @Entity
 @ManagedBean 
-@SessionScoped
 public class Customer implements Serializable 
 {
     @Id
@@ -18,9 +19,14 @@ public class Customer implements Serializable
     private String lastName;
     private String street;
     private String city;
+    @Size(min=5, max=5, message ="Zipcode must be 5 digits long")
     private String zipcode;
+    @State
     private String usstate;
     private String phone;
+    @Pattern(regexp="[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\\."+"[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@"
+    +"(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?",
+    message="Please enter a valid email")
     private String email;
        
     public void Address() 

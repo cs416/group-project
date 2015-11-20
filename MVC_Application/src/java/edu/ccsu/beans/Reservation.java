@@ -5,10 +5,12 @@ package edu.ccsu.beans;
 import java.io.Serializable;
 import javax.persistence.Entity;
 import javax.faces.bean.ManagedBean;
+import javax.faces.bean.SessionScoped;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 
 @Entity
+@SessionScoped
 @ManagedBean(name = "reservation")
 public class Reservation implements Serializable {
     

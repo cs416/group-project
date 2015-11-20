@@ -1,5 +1,3 @@
-/* ReservationSave.java             @author(Cameron)               */
-/* JPA used for Product.xhtml and Reservation.java for saving data.*/
 package edu.ccsu.jpa;
 
 import edu.ccsu.beans.Reservation;
@@ -33,7 +31,7 @@ public class ReservationSave
             em.persist(reservation);
             userTransaction.commit();
             em.close();
-            returnValue = "RegisterReservation";
+            returnValue = "Confirmation";
         } catch (Exception e) {
             e.printStackTrace();
         }
