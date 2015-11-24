@@ -3,9 +3,18 @@
 <html xmlns="http://www.w3.org/1999/xhtml"
       xmlns:h="http://java.sun.com/jsf/html">
     <h:head>
-        <title>Customer data entered</title>
+        <title>Register Confirmation</title>
     </h:head>
     <h:body>
-       <h1>  Your Information saved successfully</h1>     
+        <h2> Thank you for joining our website! </h2> 
+         <h:panelGrid columns="2" columnClasses="fieldnames,leftAlign">
+            <h:outputText value="Name:"></h:outputText>
+            <h:outputText value="#{customer.firstName} #{customer.lastName}"></h:outputText>
+            <h:outputText value="Email:"></h:outputText>
+            <h:outputText value="#{customer.email}"></h:outputText>
+            <h:outputText value="State:"></h:outputText>
+            <h:outputText value="#{customer.usstate}"></h:outputText>                
+       </h:panelGrid>
     </h:body>
 </html>
+

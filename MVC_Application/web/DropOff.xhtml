@@ -1,27 +1,31 @@
 <?xml version='1.0' encoding='UTF-8' ?>
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
-    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml"
       xmlns:h="http://java.sun.com/jsf/html"
       xmlns:f="http://java.sun.com/jsf/core">
-    <h:head><h1>Reservation Page.</h1></h:head>
+    <h:head>
+        <title>Reservation Page</title>
+    </h:head>   
     <h:body>
-        <!--Takes in customer reservation data-->
-        <h:form>
-            <!--Drop off / Pick up Radio Buttons-->
-            <p><b>Will you be getting picked up or dropped off at the
-                airport?</b></p>
-            <h:selectOneRadio value="#{reservation.dropPick}">
-                Drop off at airport:
-                <f:selectItem   itemValue = "Dropped off"
-                                itemLabel = "Dropped off"/> <br/>
-                Pick up at airport:
-                <f:selectItem   itemValue = "Picked up"
-                                itemLabel = "Picked up" /> <br/>
-            </h:selectOneRadio>
-            <!--Airport Radio Buttons-->
+        <h2> Enter your information </h2>
+        <h:messages style="color:red;font-weight:bold;"></h:messages>
+        <h:form>            
+        <h:panelGrid columns="2" columnClasses="rightAlign,leftAlign">
+            <h:outputText value="First Name"/>       
+            <h:inputText label="first" value="#{reservationDrop.firstName}" id="first" required="true"><f:validateRequired></f:validateRequired>
+            <f:ajax event="keyup" execute="last" render="fullname"/>
+            </h:inputText>  
+            <h:outputText value="Last Name"/>
+            <h:inputText label="last" value="#{reservationDrop.lastName}" id="last" required="true"><f:validateRequired></f:validateRequired>    
+            <f:ajax event="keyup" execute="first" render="fullname"/>
+            </h:inputText>
+            <h:outputText value="Full name"/>
+            <h:outputText id="fullname" value= "#{reservationDrop.firstName} #{reservationDrop.lastName}" ></h:outputText>            
+            <h:outputText value="Email Adress"></h:outputText>
+            <h:inputText label="email" value="#{reservationDrop.email}" required="true"><f:validateRequired></f:validateRequired></h:inputText>
+         </h:panelGrid>     
             <p><b>Select an airport</b></p>
-            <h:selectOneRadio value="#{reservation.airport}">
+            <h:selectOneRadio value="#{reservationDrop.airport}">
                 <f:selectItem   itemValue = "JFK"
                                 itemLabel = "NYC - JFK Airport" />
                 <f:selectItem   itemValue = "LaGuardia"
@@ -33,7 +37,7 @@
             <p><b>Select a date</b></p>
             <!--Day-->
             Day:
-            <h:selectOneMenu value = "#{reservation.rDay}">
+            <h:selectOneMenu value = "#{reservationDrop.rDay}">
                 <f:selectItem itemValue = "1" itemLabel = "1" />
                 <f:selectItem itemValue = "2" itemLabel = "2" />
                 <f:selectItem itemValue = "3" itemLabel = "3" />
@@ -68,7 +72,7 @@
             </h:selectOneMenu> 
             <!--Month-->
             Month:
-            <h:selectOneMenu value = "#{reservation.rMonth}">
+            <h:selectOneMenu value = "#{reservationDrop.rMonth}">
                 <f:selectItem itemValue = "1" itemLabel = "January" />
                 <f:selectItem itemValue = "2" itemLabel = "February" />
                 <f:selectItem itemValue = "3" itemLabel = "March" />
@@ -84,7 +88,7 @@
             </h:selectOneMenu> 
             <!--Year-->
             Year:
-            <h:selectOneMenu value = "#{reservation.rYear}">
+            <h:selectOneMenu value = "#{reservationDrop.rYear}">
                 <f:selectItem itemValue = "2015" itemLabel = "2015" />
                 <f:selectItem itemValue = "2016" itemLabel = "2016" />
                 <f:selectItem itemValue = "2017" itemLabel = "2017" />
@@ -93,7 +97,7 @@
             <p><b>Select a time</b></p>
             <!--Hour-->
             Hour:
-            <h:selectOneMenu value = "#{reservation.rHour}">
+            <h:selectOneMenu value = "#{reservationDrop.rHour}">
                 <f:selectItem itemValue = "1" itemLabel = "1" />
                 <f:selectItem itemValue = "2" itemLabel = "2" />
                 <f:selectItem itemValue = "3" itemLabel = "3" />
@@ -109,21 +113,21 @@
             </h:selectOneMenu>
             <!--Minutes-->
             Minute:
-            <h:selectOneMenu value = "#{reservation.rMinute}">
+            <h:selectOneMenu value = "#{reservationDrop.rMinute}">
                 <f:selectItem itemValue = "00" itemLabel = "00" />
                 <f:selectItem itemValue = "15" itemLabel = "15" />
                 <f:selectItem itemValue = "30" itemLabel = "30" />
                 <f:selectItem itemValue = "45" itemLabel = "45" />
             </h:selectOneMenu>
             <!--AM or PM-->
-            <h:selectOneMenu value = "#{reservation.ampm}" >
+            <h:selectOneMenu value = "#{reservationDrop.ampm}" >
                 <f:selectItem itemValue = "AM" itemLabel = "AM" />
                 <f:selectItem itemValue = "PM" itemLabel = "PM" />
             </h:selectOneMenu> <br/> <br/>
             <!--Submit product selection button-->
             <h:commandButton value = "Reivew"
                              type = "submit"
-                             action = "ProductReview.xhtml" />
+                             action = "ProductReviewDrop.xhtml" />
         </h:form>
     </h:body>
 </html>
