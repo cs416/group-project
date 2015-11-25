@@ -14,7 +14,7 @@ import javax.transaction.UserTransaction;
 @Named
 public class ReservationSavePickUp 
 {
-    @PersistenceUnit(unitName = "HW3DBPU")
+    @PersistenceUnit(unitName = "FinalProjectDBPU")
     private EntityManagerFactory entityManagerFactory;
     @Resource
     private UserTransaction userTransaction;

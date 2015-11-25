@@ -5,9 +5,29 @@
       xmlns:f="http://java.sun.com/jsf/core">
     <h:head>
         <title>Sign In</title>
+        <style type="text/css">
+        h2 {color: white; background-color: #1db140}
+        </style>
+        <link href="main.css" rel="stylesheet" type="text/css" />
     </h:head>
     <h:body>
-        <h1>Create Your Log-in ID and Password </h1>
+        
+       <div id="outer">
+           <h1>
+               <a href="index.xhtml">
+                   <h:graphicImage url="/images/LimoLogo.jpg" alt="GoGo Limo"/>
+               </a>
+           </h1>
+       </div>
+        
+        <div id="links">
+        <a href="SignUp.xhtml">Sign Up</a>
+        <a href="Login.xhtml">Login</a>
+        <a href="Navigation.xhtml">Navigation</a>
+        </div>   
+        
+        <div id="inner">
+        <h2>Create Your Log-in ID and Password </h2>
         <h:messages style="color:red;font-weight:bold;"></h:messages>
         <h:form>
         <h:panelGrid columns="2" columnClasses="rightAlign,leftAlign">
@@ -16,13 +36,14 @@
                 <f:validateRequired></f:validateRequired>
             </h:inputText>
             <h:outputText value="Password"></h:outputText>
-            <h:inputText label="password" value="#{signUp.password}" required="true">
+            <h:inputSecret label="password" value="#{signUp.password}" required="true">
                 <f:validateRequired></f:validateRequired>
                 <f:validateLength minimum="4" maximum="100"></f:validateLength>
-            </h:inputText>
+            </h:inputSecret>
             <h:commandButton action="#{signUpSave.saveInfo}" value="Save"></h:commandButton>
         </h:panelGrid>
         </h:form>
+        </div>
     </h:body>
 </html>
 

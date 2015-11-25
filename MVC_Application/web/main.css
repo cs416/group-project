@@ -1,0 +1,20 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Nov 24, 2015, 5:54:17 PM
+    Author     : Kevin
+*/
+
+body  {background-color: white; font-family: Arial, Helvetica, sans-serif}
+h2   {font-size: 2em; text-indent: 1em}
+a    {display: block; margin: 0.7em}
+
+#outer {width: 55em}
+#links {float: left; width: 9em; background-color: white;
+        border-style: solid; border-width: 0.3em; border-color: #1db140}
+#inner {margin-left: 11em; padding-left: 1em; 
+        border-left: 0.1em solid #1db140}
+#break {border-top: 0.1em dotted #1db140}

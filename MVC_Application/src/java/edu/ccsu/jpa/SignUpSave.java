@@ -14,7 +14,7 @@ import javax.transaction.UserTransaction;
 public class SignUpSave
 {
     
-    @PersistenceUnit(unitName = "HW3DBPU")
+    @PersistenceUnit(unitName = "FinalProjectDBPU")
     private EntityManagerFactory entityManagerFactory;
     @Resource
     private UserTransaction userTransaction;
