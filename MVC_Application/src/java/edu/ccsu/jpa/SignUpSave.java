@@ -1,4 +1,3 @@
-
 package edu.ccsu.jpa;
 
 import edu.ccsu.beans.SignUp;

@@ -4,10 +4,30 @@
       xmlns:h="http://java.sun.com/jsf/html"
       xmlns:f="http://java.sun.com/jsf/core">
     <h:head>
-        <title>Reservation Page</title>
-    </h:head>   
+        <title>Drop Off</title>
+        <style type="text/css">
+        h2 {color: white; background-color: #1db140}
+        </style>
+        <link href="main.css" rel="stylesheet" type="text/css" />
+    </h:head>
     <h:body>
-        <h2> Enter your information </h2>
+        
+       <div id="outer">
+           <h1>
+               <a href="index.xhtml">
+                   <h:graphicImage url="/images/LimoLogo.jpg" alt="GoGo Limo"/>
+               </a>
+           </h1>
+       </div>
+        
+        <div id="links">
+        <a href="SignUp.xhtml">Sign Up</a>
+        <a href="Login.xhtml">Login</a>
+        <a href="Navigation.xhtml">Navigation</a>
+        </div>   
+        
+        <div id="inner">
+        <h2>Drop Off</h2>
         <h:messages style="color:red;font-weight:bold;"></h:messages>
         <h:form>            
         <h:panelGrid columns="2" columnClasses="rightAlign,leftAlign">
@@ -129,5 +149,6 @@
                              type = "submit"
                              action = "ProductReviewDrop.xhtml" />
         </h:form>
+        </div>
     </h:body>
 </html>
