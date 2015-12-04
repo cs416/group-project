@@ -15,7 +15,7 @@ import javax.transaction.UserTransaction;
 
 public class CustomerSave 
 {
-    @PersistenceUnit(unitName = "FinalProjectDBPU")
+    @PersistenceUnit(unitName = "FinalProjectPU")
     private EntityManagerFactory entityManagerFactory;
     @Resource
     private UserTransaction userTransaction;

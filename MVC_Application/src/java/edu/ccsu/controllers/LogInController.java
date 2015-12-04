@@ -22,7 +22,7 @@ import javax.transaction.UserTransaction;
 public class LogInController 
 {
 
-    @PersistenceUnit(unitName = "FinalProjectDBPU")
+    @PersistenceUnit(unitName = "FinalProjectPU")
     private EntityManagerFactory entityManagerFactory;
     @Resource
     private UserTransaction userTransaction;
